@@ -3,7 +3,7 @@ from hashlib import md5
 
 app = flask.Flask(__name__)
 fk_ips = ['136.243.38.147', '136.243.38.149', '136.243.38.150', '136.243.38.151', '136.243.38.189', '88.198.88.98']
-pay_sign = md5('78698:7000:0t49drxg:test'.encode('utf-8')).hexdigest()
+pay_sign = md5('SECRET'.encode('utf-8')).hexdigest()
 
 @app.route('/', methods=['POST', 'GET'])
 def process_request():
